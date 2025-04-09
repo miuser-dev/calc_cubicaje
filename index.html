@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de Palets</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="main-header">
+        <div class="header-container">
+            <div class="logo">
+                <h1>PaletCalc</h1>
+            </div>
+            <nav class="main-nav">
+                <ul>
+                    <!-- <li><a href="#" class="active">Calculadora</a></li> -->
+                    <li><a href="#">Guía de Uso</a></li>
+                    <li><a href="#">Acerca de</a></li>
+                    <li><a href="#">Contacto</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <div class="container">
+        <h1>Optimización de Paletización de Cajas</h1>
+        
+        <div class="input-section">
+            <h2>Dimensiones de la Caja</h2>
+            <div class="form-group">
+                <label for="caja-largo">Largo (cm):</label>
+                <input type="number" id="caja-largo" min="1" step="0.1" placeholder="Ingrese el largo de la caja">
+                <small>Ingrese una de las dimensiones de la caja</small>
+            </div>
+            <div class="form-group">
+                <label for="caja-ancho">Ancho (cm):</label>
+                <input type="number" id="caja-ancho" min="1" step="0.1" placeholder="Ingrese el ancho de la caja">
+                <small>Ingrese otra de las dimensiones de la caja</small>
+            </div>
+            <div class="form-group">
+                <label for="caja-alto">Alto (cm):</label>
+                <input type="number" id="caja-alto" min="1" step="0.1" placeholder="Ingrese el alto de la caja">
+                <small>Ingrese la altura de la caja</small>
+            </div>
+            
+            <h2>Tipo de Palet</h2>
+            <div class="radio-group">
+                <div class="radio-option">
+                    <input type="radio" id="palet-americano" name="tipo-palet" value="americano" checked>
+                    <label for="palet-americano">Americano (120 x 100 cm)</label>
+                </div>
+                <div class="radio-option">
+                    <input type="radio" id="palet-europeo" name="tipo-palet" value="europeo">
+                    <label for="palet-europeo">Europeo (120 x 80 cm)</label>
+                </div>
+                <div class="radio-option">
+                    <input type="radio" id="palet-personalizado" name="tipo-palet" value="personalizado">
+                    <label for="palet-personalizado">Personalizado</label>
+                </div>
+                <small>Seleccione el tipo de palet que utilizará</small>
+            </div>
+            
+            <div id="dimensiones-personalizadas" class="hidden">
+                <div class="form-group">
+                    <label for="palet-largo">Largo (cm):</label>
+                    <input type="number" id="palet-largo" min="1" step="0.1" placeholder="Ingrese el largo del palet">
+                    <small>Largo personalizado del palet</small>
+                </div>
+                <div class="form-group">
+                    <label for="palet-ancho">Ancho (cm):</label>
+                    <input type="number" id="palet-ancho" min="1" step="0.1" placeholder="Ingrese el ancho del palet">
+                    <small>Ancho personalizado del palet</small>
+                </div>
+            </div>
+            
+            <h2>Altura Máxima</h2>
+            <div class="form-group">
+                <label for="altura-maxima">Altura máxima (cm):</label>
+                <input type="number" id="altura-maxima" min="1" step="1" placeholder="Ingrese la altura máxima permitida">
+                <small>Altura máxima hasta donde se pueden apilar las cajas</small>
+            </div>
+            
+            <button id="calcular-btn">Calcular</button>
+        </div>
+        
+        <div class="results-section">
+            <h2>Resultados</h2>
+            <div id="resultados">
+                <p>Complete los datos y presione "Calcular" para ver los resultados de todas las combinaciones posibles.</p>
+            </div>
+        </div>
+    </div>
+    
+    <footer class="main-footer">
+        <div class="footer-container">
+            <p>&copy; 2025 PaletCalc - Todos los derechos reservados</p>
+        </div>
+    </footer>
+    
+    <script src="script.js"></script>
+</body>
+</html>
